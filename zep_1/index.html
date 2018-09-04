@@ -3,73 +3,102 @@
 <head>
 	<title>Zeplin 02-Interesting Reads</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\css\styles.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
 </head>
 <body>
-	<p>changed</p>
+	<div id="popup-small" class="popup-position">
+		<div id="popup-wrapper">
+			<div id="popup-container">
+				<h3>POP UP</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+				<p><a href="javascript:void(0)" onmousedown="hidePopup();">Close pop-up X</a></p>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-askBeroe" class="askBeroe-popup-pos">
+		<div id="popup-wrap">
+			<div id="popup-cont">
+				<h1>--------------ASK BEROE--------------</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p><a href="javascript:void(0)" onmousedown="toggleAskBeroePopUp();">Close pop-up X</a></p>
+			</div>
+		</div>
+	</div>
+
 	<div class="container-for-header">
 		<header>
 			<div class="header-fill">
-			<div class="fill-top-navbar">
-				<nav class="nav-first-row">
-					<div class="logo">
-						<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\beroe-live-logo.png">
-					</div>
-					<ul class="clearfix">
-							
-						<li class="search-bar">
-							<input  type="text" name="" placeholder="Search">
-						</li>
-							
-						<li class="notification-icon">
-							<img  src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\notification-icon.png">	
-						</li>
+				<div class="fill-top-navbar">
+					<nav class="nav-first-row">
+						<div class="logo">
+							<img src="./assets/icons/beroe-live-logo.png">
+						</div>
+						<ul>
 								
-						<li class="login-ask">
-							<div class="clearfix">
-								<img  src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\full-screen-opaque-copy.png">
-								<a href="index.html">Hi John!</a>
-							</div>
-						</li>
+							<li id="searchBar" class="search-bar">
+								<input type="text" name="" placeholder="Search..." maxlength="20" onmousedown="activeSearch();" onblur="inActiveSearch();" autocomplete="off">
+							</li>
 								
-						<li class="login-ask">
-							<div class="clearfix">
-								<img  src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\ask-beroe.png">
-								<a href="index.html">Ask Beroe</a>
+							<li class="notification-icon">
+								<img  src="./assets/icons/notification-icon.png">	
+							</li>
+									
+							<li class="login-ask">
+								<div>
+									<img  src="./assets/icons/full-screen-opaque-copy.png">
+									<a href="index.html">Hi John!</a>
+								</div>
+							</li>
+									
+							<li class="login-ask">
+								<div>
+									<img  src="./assets/icons/ask-beroe.png">
+									<a onclick="toggleAskBeroePopUp();" onblur="toggleAskBeroePopUp();">Ask Beroe</a>
+								</div>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+				<div class="fill-bottom-navbar">
+					<nav class="nav-second-row">
+						<div  id="links" class="list">
+							<div class="list-items">
+								<div class="list-item">
+									<a href="#" class="linkbutton active">Dashboard </a>
+								</div>
+								<div class="list-item">
+									<a href="#" class="linkbutton">Discussions </a>
+								</div>
+								<div class="list-item">
+									<a href="#" class="linkbutton">Interesting Reads</a>
+								</div>
 							</div>
-						</li>
 
-					</ul>
-				</nav>
-			</div>
-			<div class="fill-bottom-navbar">
-			<nav class="nav-second-row" class="clearfix">
-				<ul class="clearfix">
-
-					<li class="left-link">
-						<a href="www.google.com" target="_blank">Dashboard </a>
-					</li>
-					<li class="left-link">
-						<a href="www.google.co.in" target="_blank">Discussions </a>
-					</li>
-					<li class="left-link">
-						<a href="www.google.com" target="_blank">Interesting Reads</a>
-					</li>
-					<li class="right-link">
-						<a href="www.google.com" target="_blank">Customised Reports</a>
-					</li>		
-					
-				</ul>
-			</nav>
-			</div>
+							<div class="list-items">
+								<div class="list-item">
+									<a href="#" class="linkbutton">Customised Reports</a>
+								</div>
+							</div>		
+						</div>
+					</nav>
+			    </div>
 			</div>
 			<div class="fill-header-section">
 			<section>
 				<span class="header-section-head">INTERESTING READS</span><div id="grad-first-line"></div>
 				<div>
 					<p class="header-section-sub-head">Commercial & Reminder Items, Technology, Category 2</p>
-					<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\caret-circle-white.png">
+					
+					<button class= "ripple" onclick="showPopup();"><img src="./assets/icons/caret-circle-white.png"></button>
 				</div>
 				<p class="header-section-count">+ 5 more</p>
 			</section>
@@ -78,7 +107,7 @@
 		<div class="fill-showcase">
 		<section class="showcase" class="clearfix">
 				<div class="first-image-box">
-					<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+					<img src="./assets/images/buildings.jpg">
 					<p class="blog-tag"><b>BLOG      </b></p>
 					<div class="first-box-div">
 						<p class="showcase-head">MARKETING MATERIALS</p>
@@ -86,15 +115,15 @@
 						<p class="showcase-name-head">Sunil Shah | 2 August 2016</p>
 						<p class="showcase-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus elem…</p>
 						<div class="star-comment-showcase">
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </div>
 					</div>
 				</div>
 				<div class="second-image-box" class="clearfix">
-					<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+					<img src="./assets/images/buildings.jpg">
 					<p class="whitepapers-tag"><b>WHITEPAPERS      </b></p>
 					<div class="second-box-div">
 						<p class="showcase-head">MARKETING MATERIALS</p>
@@ -102,9 +131,9 @@
 						<p class="showcase-name-head">Sunil Shah | 2 August 2016</p>
 						<p class="showcase-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus elem…</p>
 						<div class="star-comment-showcase">
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </div>
 					</div>
@@ -114,10 +143,17 @@
     </div>
     <div class="fill-article">
 	<article class="clearfix">
-		<section>
+		<section id="section-to-expand">
+			<div class="heading-contain">
 			    <span class="section-head">BLOG</span><div id="grad-second-line"></div>
-				<div class="first-sec" class="clearfix">
-					<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+			    <div id="banner-to-show">
+					<p>SPONSORED CONTENT</p>
+					<button class="sponser-btn-to-show" onclick="toggleAside();"><img src="./assets/icons/caret-circle-white-filled.png"></button>
+				</div>
+			</div>
+			<div class="section-container">
+				<div id="f-sec" class="first-sec" class="clearfix">
+					<img src="./assets/images/buildings.jpg">
 					<div class="matter">
 						<p class="matter-head">La Nina to have a positive impact on key Indian crop</p>
 						<p class="matter-sub-head">Sunil Shah | 2 August 2016</p>
@@ -129,55 +165,55 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
-				<div class="second-sec">
+				
 					<div class="box">
-						<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+						<img src="./assets/images/buildings.jpg">
 						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
 						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
-							<img class="box-img" src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img class="box-img" src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img class="box-img" src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img class="box-img" src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </span>
 					</div>
 					<div class="box">
-						<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+						<img src="./assets/images/buildings.jpg">
 						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
 						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </span>
 					</div>
-				</div>
-				<div class="second-sec">
+				
+				
 					<div class="box">
-						<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+						<img src="./assets/images/buildings.jpg">
 						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
 						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </span>
 					</div>
 					<div class="box">
-						<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+						<img src="./assets/images/buildings.jpg">
 						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
 						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\grey-star.png">
+							<img src="./assets/icons/grey-star.png">
 							<p class="star-comment-para">5 | </p>
-							<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\icons\comments.png">
+							<img src="./assets/icons/comments.png">
 							<p class="star-comment-para">15 K</p>
 					    </span>
 					</div>
-				</div>
-				<!-- <a href="index2.html" style="color: #5d52a8; font-size: 14px; padding-top: 30px;">More</a><span style="color: #5d52a8; font-size: 14px;">></span> -->
+			</div>
 		</section>
-		<aside>
+
+		<aside id="aside-to-hide">
 			<div class="blogs">
-				<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+				<img src="./assets/images/buildings.jpg">
 				<div class="matter-for-aside">
 					<p class="aside-same-para-first"><b>BLOG</b></p>
 					<p class="aside-same-para-second">La Nina to have a positive impact on key Indian crop</p>
@@ -185,7 +221,7 @@
 				</div>
 			</div>
 			<div class="blogs">
-				<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+				<img src="./assets/images/buildings.jpg">
 				<div class="matter-for-aside">
 					<p class="aside-same-para-first"><b>BLOG</b></p>
 					<p class="aside-same-para-second">La Nina to have a positive impact on key Indian crop</p>
@@ -193,18 +229,89 @@
 				</div>
 			</div>
 			<div class="blogs">
-				<img src="C:\Users\moonraft\Desktop\Projects and assignments\zep_1\assets\images\buildings.jpg">
+				<img src="./assets/images/buildings.jpg">
 				<div class="matter-for-aside">
 					<p class="aside-same-para-first"><b>BLOG</b></p>
 					<p class="aside-same-para-second">La Nina to have a positive impact on key Indian crop</p>
-					<p class="aside-same-para-thrird">Sunil Shah | 2 August 2016</p>
+					<p class="aside-same-para-third">Sunil Shah | 2 August 2016</p>
 				</div>
 			</div>
 			<div class="banner">
 				<p>SPONSORED CONTENT</p>
+				<div class="sponser-btn"><button onclick="toggleAside();"><img src="./assets/icons/close-white.png"></button></div>
 			</div>
 		</aside>
 	</article>
 	</div>
+	<div class="extra-wrapper">
+		<div class="extra-container">
+			<div id="extra-matter">
+				<div class="first-ex" class="clearfix">
+					<img src="./assets/images/buildings.jpg">
+					<div class="matter">
+						<p class="matter-head">La Nina to have a positive impact on key Indian crop</p>
+						<p class="matter-sub-head">Sunil Shah | 2 August 2016</p>
+						<p class="matter-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				
+					<div class="ex-box">
+						<img src="./assets/images/buildings.jpg">
+						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
+						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
+							<img class="box-img" src="./assets/icons/grey-star.png">
+							<p class="star-comment-para">5 | </p>
+							<img class="box-img" src="./assets/icons/comments.png">
+							<p class="star-comment-para">15 K</p>
+					    </span>
+					</div>
+					<div class="ex-box">
+						<img src="./assets/images/buildings.jpg">
+						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
+						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
+							<img src="./assets/icons/grey-star.png">
+							<p class="star-comment-para">5 | </p>
+							<img src="./assets/icons/comments.png">
+							<p class="star-comment-para">15 K</p>
+					    </span>
+					</div>
+				
+				
+					<div class="ex-box">
+						<img src="./assets/images/buildings.jpg">
+						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
+						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
+							<img src="./assets/icons/grey-star.png">
+							<p class="star-comment-para">5 | </p>
+							<img src="./assets/icons/comments.png">
+							<p class="star-comment-para">15 K</p>
+					    </span>
+					</div>
+					<div class="ex-box">
+						<img src="./assets/images/buildings.jpg">
+						<p class="box-para">La Nina to have a positive impact on key Indian crop</p>
+						<span class="box-span">Sunil Shah | 2 August 2016 | </span><span class="star-comment-box">
+							<img src="./assets/icons/grey-star.png">
+							<p class="star-comment-para">5 | </p>
+							<img src="./assets/icons/comments.png">
+							<p class="star-comment-para">15 K</p>
+					    </span>
+					</div>
+			</div>
+			<div class="more-less">
+				<p id="dots">. . . . . .</p>
+				<button class="read-more" onclick="extraMatter()" id="myBtn">Read more</button>
+			</div>
+		</div>
+    </div>
+	<footer>
+		<p><b>Beroe</b></p>
+	</footer>
+<script src="./javascript/index.js" type="text/javascript"></script>
 </body>
 </html>
