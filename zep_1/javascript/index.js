@@ -2,23 +2,32 @@
 /* -------  JavaScript  ------- */
 
 
-		function activeSearch()
+		function toggleSearch()
 		{
 			var searchBar = document.getElementById('searchBar');
-			searchBar.style.width="300px";
+
+			if(searchBar.style.width != "300px")
+			{
+				searchBar.style.width = "300px";
+			}
+			else
+			{
+				searchBar.style.width = "200px";
+			}
 		}
 		
-		function inActiveSearch()
+
+		function changeColor()
 		{
-			var searchBar = document.getElementById('searchBar');
-			searchBar.style.width="200px";
+			var search = document.getElementById('search');
+			search.style.backgroundColor = "#ffffff";
 		}
 		
-		function showPopup()
+		function togglePopup()
 		{
 			var pop = document.getElementById('popup-small');
 			
-			if ( pop.style.display == "block" )
+			if ( pop.style.display != "none" )
 			{
 				pop.style.display="none";
 			}
@@ -27,12 +36,7 @@
 				pop.style.display="block";
 			}
 		}
-		
-		function hidePopup()
-		{
-			var pop = document.getElementById('popup-small');
-			pop.style.display="none";
-		}
+
 		
 		function toggleAskBeroePopUp()
 		{
@@ -84,7 +88,7 @@
 
 			var boxes = sec.getElementsByClassName('box');
 
-			if(aside.style.display == "block")
+			if(aside.style.display != "none")
 			{
 				aside.style.display="none";
 				btn.style.display="inline-block";

@@ -8,15 +8,6 @@
 	
 </head>
 <body>
-	<div id="popup-small" class="popup-position">
-		<div id="popup-wrapper">
-			<div id="popup-container">
-				<h3>POP UP</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-				<p><a href="javascript:void(0)" onmousedown="hidePopup();">Close pop-up X</a></p>
-			</div>
-		</div>
-	</div>
 
 	<div id="popup-askBeroe" class="askBeroe-popup-pos">
 		<div id="popup-wrap">
@@ -44,7 +35,7 @@
 						<ul>
 								
 							<li id="searchBar" class="search-bar">
-								<input type="text" name="" placeholder="Search..." maxlength="20" onmousedown="activeSearch();" onblur="inActiveSearch();" autocomplete="off">
+								<input id="search" type="text" name="" placeholder="Search..." maxlength="20" onmousedown="toggleSearch();" onblur="toggleSearch();" onmouseover="changeColor();" autocomplete="off">
 							</li>
 								
 							<li class="notification-icon">
@@ -97,8 +88,16 @@
 				<span class="header-section-head">INTERESTING READS</span><div id="grad-first-line"></div>
 				<div>
 					<p class="header-section-sub-head">Commercial & Reminder Items, Technology, Category 2</p>
-					
-					<button class= "ripple" onclick="showPopup();"><img src="./assets/icons/caret-circle-white.png"></button>
+					<div class="btn-pop">
+						<button class= "ripple" onclick="togglePopup();"><img src="./assets/icons/caret-circle-white.png"></button>	
+						<div id="popup-small" class="popup-position">			
+							<div id="popup-container">
+								<h3>POP UP</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								<p><a href="javascript:void(0)" onmousedown="togglePopup();">Close pop-up X</a></p>
+							</div>	
+						</div>
+					</div>
 				</div>
 				<p class="header-section-count">+ 5 more</p>
 			</section>

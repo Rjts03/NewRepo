@@ -261,6 +261,7 @@ button
 	outline: none;
 }
 
+
 .ripple {
   background-position: center;
   transition: background 0.4s;
@@ -269,7 +270,6 @@ button
   background: rgba(0,0,0,0.2) radial-gradient(circle, transparent 1%, rgba(255,255,255,0.5) 1%) center/15000%;
 }
 .ripple:active {
-  /*background-color: blue;*/
   background-size: 100%;
   transition: background 0s;
 }
@@ -699,28 +699,27 @@ aside img
 
 /* POP UPs */
 
-.popup-position
+.btn-pop
 {
-	z-index: 1;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-12%, -85%);
-	background-color: rgba(0, 0, 0, 0);
-	width: 40%;
-	height: 30%;
-	display: none;
+	display: inline-block;
+	width: 20%;
+	position: relative;
 }
 
-#popup-wrapper
+.popup-position
 {
-	width: 500px;
-	margin: 45px auto;
-	text-align: left;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	display: none;
 }
 
 #popup-container
 {
+	position: absolute;
+    z-index: 1;
+    right: 42%;
+    top: 100%;
+    width: 100%;
 	background-color: #8dedefeb;
 	padding: 20px;
 	color: black;
@@ -729,28 +728,24 @@ aside img
 	box-shadow: 4px 4px 15px 3px #000000;
 }
 
-#popup-container:after, #popup-container:before {
-	top: 6px;
-	left: 50%;
+#popup-container {
+	position: relative;
+	background: #8dedefeb;
+}
+
+#popup-container:after {
+	bottom: 100%;
+	left: 48%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-}
-
-#popup-container:after {
-	border-color: #8dedefeb;
-	border-bottom-color:#8dedefeb;
-	border-width: 15px;
-	margin-left: -15px;
-}
-#popup-container:before {
-	border-color: #8dedefeb;
+	border-color: rgba(141, 237, 239, 0);
 	border-bottom-color: #8dedefeb;
 	border-width: 20px;
-	margin-left: -20px;
+	margin-left: -15px;
 }
 
 .askBeroe-popup-pos
@@ -972,7 +967,7 @@ footer
 	color: #b0b0b0;
 	font-size: 20px;
 	letter-spacing: 10px;
-	margin-top: 35px;
+	margin-top: 10px;
 }
 
 /* Responsiveness */
