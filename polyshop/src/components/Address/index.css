@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.add-form {
+    padding-top: 20px;
+    margin: 40px;
+}
+
+.tag {
+    padding: 10px 20px;
+    color: rgb(65, 58, 58);
+}
+
+.input-wrap {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-wrap input {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    font-size: 18px;
+}
+
+.alert-msg {
+    color: red;
+    font-size: 12px;
+    padding-top: 5px;
+
+}
