@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* productlist page */
+
+.banner {
+  width: 100%;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  padding: 10px;
+}
+
+#count {
+  color: grey;
+  font-size: 12px;
+}
+
+.prod-list {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.list-item img {
+  width: 100%;
+}
+
+/* productdetail page */
+
+.prod-desc {
+  background-color: greenyellow;
+  border: 3px dashed green;
+  display: flex;
+  justify-content: center;
+}
+
+.prod-desc h2 {
+  text-decoration: underline;
+}
+
+/* Checkout */
+
+.app-checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.check-box {
+  display: flex;
+}
+
+.check-box input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.check-box p {
+  margin: 20px;
+  -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.PO-btn {
+  width: 15%;
+  background: none;
+  outline: none;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 16px;
+  margin: 40px;
+}
+
+/* Posts-page */
+
+.all-posts {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  padding: 20px;
+}
+
+.post {
+  border: 1px dashed grey;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(185, 182, 182, 0.459)
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

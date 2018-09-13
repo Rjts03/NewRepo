@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.app-header {
+    
+    text-align: center;
+    padding: 20px;
+    color: black;
+    width: 100%;
+    display: flex;
+}
+
+.app-header a {
+    width: 90%;
+    padding-left: 12%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.app-header img {
+    width: 25px;
+    height: 25px;
+    margin-left: 90px;
+}
